@@ -10,7 +10,8 @@ app.set("view engine", "ejs");
 mongoose.connect("mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugng.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(console.log("Database Connected"));
+}).then(
+    console.log("Database Connected"));
 
 
 // Routes
