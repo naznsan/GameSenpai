@@ -2,11 +2,9 @@ const   express = require("express"),
         app = express(),
         mongoose = require("mongoose"),
         Coach = require("./models/coach"),
-        Game = require("./models/game");
+        Game = require("./models/game"),
+        seedDb = require("./seed");
 
-
-// App Config
-app.set("view engine", "ejs");
 
 // Mongoose Config
 mongoose.connect("mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugng.mongodb.net/test?retryWrites=true&w=majority", {
@@ -14,6 +12,11 @@ mongoose.connect("mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugn
     useUnifiedTopology: true
 }).then(
     console.log("Database Connected"));
+
+// App Config
+app.set("view engine", "ejs");
+
+seedDb();
 
 
 // Routes
