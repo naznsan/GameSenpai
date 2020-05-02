@@ -23,6 +23,10 @@ app.get("/game/:title", (req, res) => {
     res.render("game");
 });
 
+app.get("/coach/:id", (req, res) => {
+    res.render("coach");
+});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
