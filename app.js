@@ -1,9 +1,9 @@
-const   express = require("express"),
-        app = express(),
-        mongoose = require("mongoose"),
-        Coach = require("./models/coach"),
-        Game = require("./models/game"),
-        seedDb = require("./seed");
+const express = require("express"),
+    app = express(),
+    mongoose = require("mongoose"),
+    Coach = require("./models/coach"),
+    Game = require("./models/game"),
+    seedDb = require("./seed");
 
 
 // Mongoose Config
@@ -15,6 +15,7 @@ mongoose.connect("mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugn
 
 // App Config
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 seedDb();
 
