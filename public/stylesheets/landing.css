@@ -1,8 +1,51 @@
-
-body {
-    background-color: aquamarine;
+body, html {
+    height: 100%;
+    margin: 0;
 }
 
-h1 {
-    background-color: chartreuse;
+.parallax {
+    position: relative;
+    opacity: 0.75;
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg1 {
+    background-image: url("https://c1.wallpaperflare.com/preview/511/756/14/keyboard-gamer-computer-technology.jpg");
+}
+
+.bgimg2 {
+    background-image: url("https://live.staticflickr.com/833/41508894340_a660b21f69_z.jpg");
+}
+
+.bgimg3 {
+    background-image: url("https://c0.wallpaperflare.com/preview/7/692/15/south-korea-seoul-sangam-dong-pro-gamer.jpg");
+}
+
+.bgimg4 {
+    background-image: url("https://p0.piqsels.com/preview/740/508/1018/electronic-gaming-headphone-headset.jpg");
+}
+
+.exp {
+    color: #777;
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
 }
