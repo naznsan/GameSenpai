@@ -5,13 +5,16 @@ const express = require("express"),
     Game = require("./models/game"),
     seedDb = require("./seed");
 
-
 // Mongoose Config
-mongoose.connect("mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugng.mongodb.net/test?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(
-    console.log("Database Connected"));
+mongoose
+    .connect(
+        "mongodb+srv://GameSenpaiAdmin:JT2j8lQTrIbJtHVu@gamesenpai-sugng.mongodb.net/test?retryWrites=true&w=majority",
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+    )
+    .then(console.log("Database Connected"));
 
 // App Config
 app.set("view engine", "ejs");
@@ -19,20 +22,31 @@ app.use(express.static(__dirname + "/public"));
 
 seedDb();
 
-
 // Routes
+// Landing
 app.get("/", (req, res) => {
     res.render("landing");
 });
 
-app.get("/game/:title", (req, res) => {
-    res.render("game");
+// Games List
+app.get("/games", (req, res) => {
+    res.render("games");
 });
 
+// Game Show
+app.get("/games/:title", (req, res) => {
+    res.render("showGame");
+});
+
+// Coaches List
+app.get("/coaches", (req, res) => {
+    res.render("coaches");
+});
+
+// Coach show
 app.get("/coach/:id", (req, res) => {
-    res.render("coach");
+    res.render("specificCoach");
 });
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
