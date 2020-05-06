@@ -4,7 +4,41 @@ body, html {
     font-family: 'Fredoka One', cursive;
 
 }
+/*general*/
+a {
+    text-decoration: none;
+}
 
+ul {
+    opacity: 0.75;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: black;
+}
+
+.active {
+    color: gray;
+}
+
+/*for landing.ejs*/
 .parallax {
     position: relative;
     opacity: 0.75;
@@ -91,40 +125,7 @@ span.rainbow {
     100% {color: rgb(74, 221, 177);}
 }
 
-a {
-    text-decoration: none;
-}
-
 .caption span.clear {
     background-color: transparent;
     color: #f7f7f7;
-}
-
-ul {
-    opacity: 0.75;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #111;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: black;
-}
-
-.active {
-    color: gray;
 }
