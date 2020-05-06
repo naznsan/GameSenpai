@@ -3,7 +3,8 @@ const express = require("express"),
     mongoose = require("mongoose"),
     Coach = require("./models/coach"),
     Game = require("./models/game"),
-    seedDb = require("./seed");
+    seedGames = require("./seedGames"),
+    seedCoaches = require("./seedCoaches");
 
 // Mongoose Config
 mongoose
@@ -20,7 +21,8 @@ mongoose
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
-seedDb();
+seedGames();
+seedCoaches();
 
 // Routes
 // Landing
