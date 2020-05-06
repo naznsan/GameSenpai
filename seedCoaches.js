@@ -10,18 +10,18 @@ coaches = [
     },
     {
         name: "Juan Dos",
-        games: ["Minecraft"],
+        games: ["Minecraft", "Minesweeper"],
         ratings: [4, 5, 5],
     },
 ];
 
-const createdGames = Game.find({}, (err, found) => {
-    if (err) {
-        console.log("Error retrieving list of games");
-        console.log(err);
-    } else {
-    }
-});
+// const createdGames = Game.find({}, (err, found) => {
+//     if (err) {
+//         console.log("Error retrieving list of games");
+//         console.log(err);
+//     } else {
+//     }
+// });
 
 var seedCoaches = () => {
     // Remove all coaches

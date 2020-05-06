@@ -15,6 +15,10 @@ games = [
         name: "Microsoft Windows Pinball",
         description: "Feel the intensity in this global favorite.",
     },
+    {
+        name: "Minesweeper",
+        description: "Put the matter of life and death in your own hands.",
+    },
 ];
 
 var seedGames = () => {
