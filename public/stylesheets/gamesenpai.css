@@ -1,10 +1,11 @@
+/*general*/
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Fredoka One', cursive;
 
 }
-/*general*/
+
 a {
     text-decoration: none;
 }
@@ -128,4 +129,68 @@ span.rainbow {
 .caption span.clear {
     background-color: transparent;
     color: #f7f7f7;
+}
+
+/*for coaches.ejs*/
+body#coaches {
+    background-color: #282E34;
+}
+
+div.coach {
+    color: #dddddd;
+    background-color: #000427;
+    text-align: center;
+    margin: 20px;
+    padding: 50px 80px;
+    text-align: justify;
+    border-radius: 15px;
+}
+
+.coachContainer {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 500px){
+    .sidebar {display: none;}
+    .coachContainer {margin-left: 0;}
+}
+
+.sidebar {
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 130px;
+    left: 0 ;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #111;
+    cursor: pointer;
+    color: #ddd;
+    width: 100%;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: gray;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.coachImg {
+    height: 100%;
 }
