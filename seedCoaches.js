@@ -7,11 +7,13 @@ coaches = [
         name: "John Doe",
         games: ["Sims 4", "Microsoft Windows Pinball"],
         ratings: [3, 2, 5],
+        image: "https://imgur.com/QGJVB5z",
     },
     {
         name: "Juan Dos",
         games: ["Minecraft", "Minesweeper"],
         ratings: [4, 5, 5],
+        image: "https://imgur.com/6r5XnLX",
     },
 ];
 
