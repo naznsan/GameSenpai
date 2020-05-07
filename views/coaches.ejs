@@ -20,7 +20,7 @@
         <title>Game Senpai</title>
     </head>
 
-    <body>
+    <body id="coaches">
         <ul>
             <li><a href="/">HOME</a></li>
             <li>
@@ -30,5 +30,22 @@
         </ul>
 
         <h1>Coach Page</h1>
+
+        <div class="sidebar">
+            <div style="color: #ddd;">Games</div>
+            <% games.forEach(game => { %>
+                <button class="btn" onclick="filterSelection(<%= game.name %>)"><%= game.name %></button>
+            <% })%>
+        </div>
+
+        <div class="coachContainer">
+            <% coaches.forEach(coach => { %>
+                <div class="coach <%= coach.games %>">
+                    <img src="<%= coach.image %>" alt="" class="coachImg">
+                    <div class="coachName"><%= coach.name %></div>
+                </div>
+            <% })%>
+        </div>
+
     </body>
 </html>
