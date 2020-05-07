@@ -65,7 +65,7 @@ li a:hover:not(.active) {
     background-image: url("https://p0.piqsels.com/preview/740/508/1018/electronic-gaming-headphone-headset.jpg");
 }
 
-.exp {
+div.exp {
     color: #777;
     text-align: center;
     padding: 50px 80px;
@@ -83,12 +83,12 @@ li a:hover:not(.active) {
     background-color: #111;
     color: white;
     padding: 18px;
-    font-size: 35px;
+    font-size: 4.5vmin;
 }
 
 span.retro {
     font-family: 'Press Start 2P', cursive;
-    font-size: 25px;
+    font-size: 3.5vmin;
     color: white;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
