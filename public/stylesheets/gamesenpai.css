@@ -141,7 +141,7 @@ div.coach {
     background-color: #000427;
     text-align: center;
     margin: 20px;
-    padding: 50px 80px;
+    padding: 20px;
     text-align: justify;
     border-radius: 15px;
 }
@@ -192,7 +192,7 @@ div.coach {
 }
 
 .coachImg {
-    height: 50%;
+    height: 200px;
 }
 
 img {
