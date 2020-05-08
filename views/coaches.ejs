@@ -41,7 +41,9 @@
         <div class="coachContainer">
             <% coaches.forEach(coach => { %>
                 <div class="coach <%= coach.games %>">
-                    <img src="<%= coach.image %>" alt="" class="coachImg">
+                    <div class="coachImg">
+                        <img src="<%= coach.image %>.jpg" alt="profile photo">
+                    </div>
                     <div class="coachName"><%= coach.name %></div>
                 </div>
             <% })%>
