@@ -44,7 +44,19 @@
                     <div class="coachImg">
                         <img src="<%= coach.image %>.jpg" alt="profile photo">
                     </div>
-                    <div class="coachName"><%= coach.name %></div>
+                    <div class="coachDesc">
+                        <div class="coachName">
+                            <%= coach.name %>
+                        </div>
+                        <div class="gameList">
+                            <% coach.games.forEach(game => { %>
+                                <div class="gameName"><%= game %></div>
+                            <% })%>
+                        </div>
+                        <div class="rating">
+                            <%= coach.ratings %>
+                        </div>
+                    </div>
                 </div>
             <% })%>
         </div>

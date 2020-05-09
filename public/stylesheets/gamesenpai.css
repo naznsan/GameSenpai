@@ -139,11 +139,10 @@ body#coaches {
 div.coach {
     color: #dddddd;
     background-color: #000427;
-    text-align: center;
     margin: 20px;
     padding: 20px;
-    text-align: justify;
     border-radius: 15px;
+    float: left;
 }
 
 .coachContainer {
@@ -198,4 +197,9 @@ div.coach {
 img {
     object-fit: contain;
     height: 100%;
+    border-radius: 10px;
+}
+
+.innerCoach {
+    margin: auto;
 }
