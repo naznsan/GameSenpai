@@ -27,7 +27,7 @@
     <h1>Coach Page</h1>
 
     <div class="sidebar">
-        <div style="color: #ddd;">Games</div>
+        <span>Games</span>
         <% games.forEach(game => { %>
         <button class="btn" onclick="filterSelection(<%= game.name %>)">
             <%= game.name %>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="rating">
                     <% let total = coach.ratings.reduce((sum, num) => sum + num) %>
-                    <%= Math.round(total / coach.ratings.length * 100) / 100 %>
+                    <%= Math.round(total / coach.ratings.length * 10) / 10 %>
                     <!-- Change both 100's in line above to control rounding place -->
                 </div>
             </div>
