@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="stylesheets/gamesenpai.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Google fornts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
-            rel="stylesheet"
-        />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/gamesenpai.css" />
 
-        <title>Game Senpai</title>
-    </head>
+    <!-- Google fornts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
 
-    <body id="coaches">
-        <ul>
-            <li><a href="/">HOME</a></li>
-            <li>
-                <a class="active" href="/coaches">COACHES</a>
-            </li>
-            <li><a href="/games">GAMES</a></li>
-        </ul>
+    <title>Game Senpai</title>
+</head>
 
-        <h1>Coach Page</h1>
+<body id="coaches">
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li>
+            <a class="active" href="/coaches">COACHES</a>
+        </li>
+        <li><a href="/games">GAMES</a></li>
+    </ul>
 
-        <div class="sidebar">
-            <div style="color: #ddd;">Games</div>
-            <% games.forEach(game => { %>
-                <button class="btn" onclick="filterSelection(<%= game.name %>)"><%= game.name %></button>
-            <% })%>
-        </div>
+    <h1>Coach Page</h1>
 
-        <div class="coachContainer">
-            <% coaches.forEach(coach => { %>
-                <div class="coach <%= coach.games %>">
-                    <div class="coachImg">
-                        <img src="<%= coach.image %>.jpg" alt="profile photo">
-                    </div>
-                    <div class="coachDesc">
-                        <div class="coachName">
-                            <%= coach.name %>
-                        </div>
-                        <div class="gameList">
-                            <% coach.games.forEach(game => { %>
-                                <div class="gameName"><%= game %></div>
-                            <% })%>
-                        </div>
-                        <div class="rating">
-                            <%= coach.ratings %>
-                        </div>
-                    </div>
+    <div class="sidebar">
+        <div style="color: #ddd;">Games</div>
+        <% games.forEach(game => { %>
+        <button class="btn" onclick="filterSelection(<%= game.name %>)">
+            <%= game.name %>
+        </button>
+        <% })%>
+    </div>
+
+    <div class="coachContainer">
+        <% coaches.forEach(coach => { %>
+        <div class="coach <%= coach.games %>">
+            <div class="coachImg">
+                <img src="<%= coach.image %>.jpg" alt="profile photo" />
+            </div>
+            <div class="coachDesc">
+                <div class="coachName">
+                    <%= coach.name %>
                 </div>
-            <% })%>
+                <div class="gameList">
+                    <% coach.games.forEach(game => { %>
+                    <div class="gameName"><%= game %></div>
+                    <% })%>
+                </div>
+                <div class="rating">
+                    <% let total = coach.ratings.reduce((sum, num) => sum + num) %>
+                    <%= Math.round(total / coach.ratings.length * 100) / 100 %>
+                    <!-- Change both 100's in line above to control rounding place -->
+                </div>
+            </div>
         </div>
+        <% })%>
+    </div>
+</body>
 
-    </body>
 </html>
