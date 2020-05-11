@@ -6,8 +6,6 @@ const express = require("express"),
     seedGames = require("./seedGames"),
     seedCoaches = require("./seedCoaches");
 
-var helpers = require("./helpers");
-res.render("index", {helpers:helpers});
 // Mongoose Config
 mongoose
     .connect(
@@ -26,6 +24,8 @@ app.use(express.static(__dirname + "/public"));
 seedGames();
 seedCoaches();
 
+const helper = require("./public/js/helpers");
+
 // Routes
 // Landing
 app.get("/", (req, res) => {
@@ -34,22 +34,22 @@ app.get("/", (req, res) => {
 
 // Games List
 app.get("/games", (req, res) => {
-    res.render("games");
+    res.render("games", { helper: helper });
 });
 
 // Game Show
 app.get("/games/:title", (req, res) => {
-    res.render("showGame");
+    res.render("showGame", { helper: helper });
 });
 
 // Coaches List
 app.get("/coaches", (req, res) => {
-    res.render("coaches");
+    res.render("coaches", { helper: helper });
 });
 
 // Coach show
 app.get("/coach/:id", (req, res) => {
-    res.render("specificCoach");
+    res.render("specificCoach", { helper: helper });
 });
 
 const port = process.env.PORT || 3000;
