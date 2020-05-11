@@ -28,17 +28,20 @@
 
     <div class="sidebar">
         <span>Games</span>
-        <button class="btn" onclick="test('why')">Show All</button>
+        <button class="btn" onclick="filter('none')">Show All</button>
         <% games.forEach(game => { %>
-        <button class="btn">
+        <% let str = game.name; %> 
+        <button class="btn" onclick="filter('<%= str.replace(/\s+/g,'').toLowerCase() %>')">
             <%= game.name %>
         </button>
         <% })%>
     </div>
 
     <div class="coachContainer">
-        <% coaches.forEach(coach => { %>
-        <div class="coach <%= coach.games %>">
+        <% coaches.forEach(coach => { %>   
+        <div class="coach <% coach.games.forEach(game => { %>
+                    <%= game.toLowerCase().replace(/\s+/g,''); %>
+                        <% } ) %>">
             <div class="coachImg">
                 <img src="<%= coach.image %>.jpg" alt="profile photo" />
             </div>
@@ -61,9 +64,10 @@
         <% })%>
     </div>
 
-    <script>
-        <%= helper.test%>(str) 
-    </script>
+    <!-- <script>
+        <%= helper.test%>
+    </script> -->
+    <script type="text/JavaScript" src="js/helpers.js"></script>
     
 </body>
 
