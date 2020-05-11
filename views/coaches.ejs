@@ -28,7 +28,7 @@
 
     <div class="sidebar">
         <span>Games</span>
-        <button class="btn">Show All</button>
+        <button class="btn" onclick="test('why')">Show All</button>
         <% games.forEach(game => { %>
         <button class="btn">
             <%= game.name %>
@@ -60,6 +60,11 @@
         </div>
         <% })%>
     </div>
+
+    <script>
+        <%= helper.test%>(str) 
+    </script>
+    
 </body>
 
 </html>

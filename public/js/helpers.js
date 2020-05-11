@@ -8,4 +8,11 @@ const functionInHelper = input => {
     console.log(input);
 };
 
-module.exports = { functionInHelper };
+function test(str) {
+    console.log(str);
+}
+
+module.exports = { 
+    functionInHelper,
+    test
+};
