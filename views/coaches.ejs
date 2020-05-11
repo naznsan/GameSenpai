@@ -28,8 +28,9 @@
 
     <div class="sidebar">
         <span>Games</span>
+        <button class="btn">Show All</button>
         <% games.forEach(game => { %>
-        <button class="btn" onclick="filterSelection(<%= game.name %>)">
+        <button class="btn">
             <%= game.name %>
         </button>
         <% })%>

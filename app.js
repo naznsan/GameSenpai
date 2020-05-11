@@ -6,6 +6,8 @@ const express = require("express"),
     seedGames = require("./seedGames"),
     seedCoaches = require("./seedCoaches");
 
+var helpers = require("./helpers");
+res.render("index", {helpers:helpers});
 // Mongoose Config
 mongoose
     .connect(
