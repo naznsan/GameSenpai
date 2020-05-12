@@ -15,6 +15,36 @@ coaches = [
         ratings: [4, 5, 5],
         image: "https://imgur.com/6r5XnLX",
     },
+    {
+        name: "Dominique 'The Dominator' Mallard",
+        games: ["Minesweeper"],
+        ratings: [2, 3],
+        image: "https://imgur.com/V4LsFzz",
+    },
+    {
+        name: "Mimi Mei",
+        games: ["Microsoft Solitaire", "Microsoft Windows Pinball"],
+        ratings: [5, 4, 5],
+        image: "https://imgur.com/pQeRqmt",
+    },
+    {
+        name: "Carlo 'The Wise' Knower",
+        games: ["Club Penguin"],
+        ratings: [3, 4, 5],
+        image: "https://imgur.com/DZKgztQ",
+    },
+    {
+        name: "Julianne Shird III",
+        games: ["Roblox Counter Blox", "Sims 4"],
+        ratings: [2, 4, 4],
+        image: "https://imgur.com/z43LCQd",
+    },
+    {
+        name: "Eugenio 'Bento' Vento",
+        games: ["Farming Simulator 2008", "Club Penguin"],
+        ratings: [5, 3, 2],
+        image: "https://imgur.com/E4rwxXd",
+    },
 ];
 
 // const createdGames = Game.find({}, (err, found) => {
