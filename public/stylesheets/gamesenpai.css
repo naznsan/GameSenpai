@@ -6,6 +6,11 @@ body, html {
 
 }
 
+h1 {
+    color: white;
+    margin-left: 20px;
+}
+
 a {
     text-decoration: none;
 }
@@ -219,4 +224,20 @@ img {
 
 .hide {
     display: none;
+}
+
+/* for games.ejs */
+body#games {
+    background-color: #282E34;
+}
+
+.game {
+    font-size: 95%;
+    color: #dddddd;
+    background-color: #000427;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90vw;
+    float: center;
 }

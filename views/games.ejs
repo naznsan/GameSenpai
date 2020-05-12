@@ -20,7 +20,7 @@
         <title>Game Senpai</title>
     </head>
 
-    <body>
+    <body id="games">
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/coaches">COACHES</a></li>
@@ -29,6 +29,20 @@
             </li>
         </ul>
 
-        <h1>Game Page</h1>
+        <h1>Games Page</h1>
+
+        <div class="gameContainer">
+            <% games.forEach(game => { %>
+            <div class="game <%= game.name.toLowerCase().replace(/\s+/g,''); %>">
+                <div class="gameName">
+                    <%= game.name %>
+                </div>
+                <div class="gameDesc">
+                    <%= game.description %>
+                </div>
+            </div>
+            <% })%>
+        </div>
+
     </body>
 </html>
