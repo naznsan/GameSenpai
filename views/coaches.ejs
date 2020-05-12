@@ -28,10 +28,10 @@
 
     <div class="sidebar">
         <span>Games</span>
-        <button class="btn" onclick="filter('none')">Show All</button>
+        <button class="btn none active" onclick="filter('none')">Show All</button>
         <% games.forEach(game => { %>
         <% let str = game.name; %> 
-        <button class="btn" onclick="filter('<%= str.replace(/\s+/g,'').toLowerCase() %>')">
+        <button class="btn <%= str.replace(/\s+/g,'').toLowerCase() %>" onclick="filter('<%= str.replace(/\s+/g,'').toLowerCase() %>')">
             <%= game.name %>
         </button>
         <% })%>

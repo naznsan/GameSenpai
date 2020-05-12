@@ -13,6 +13,12 @@ function test(str) {
 }
 
 function filter(item) {
+    //clearing .active from btn
+    btns = document.getElementsByClassName("btn");
+    for (let btn of btns) {
+        btn.classList.remove("active");
+    }
+    document.getElementsByClassName("btn " + item)[0].classList.add("active");
     var coachDiv = document.getElementsByClassName("coach");
     if (item == "none") {
         item = "coach";
