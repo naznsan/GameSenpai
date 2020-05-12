@@ -19,6 +19,22 @@ games = [
         name: "Minesweeper",
         description: "Put the matter of life and death in your own hands.",
     },
+    {
+        name: "Microsoft Solitaire",
+        description: "Klondike is the only real Solitaire.",
+    },
+    {
+        name: "Club Penguin",
+        description: "F",
+    },
+    {
+        name: "Roblox Counter Blox",
+        description: "Like CS:GO, but edgier... because it's made of blocks.",
+    },
+    {
+        name: "Farming Simulator 2008",
+        description: "Feel the rumble of the 300 horsepower engine.",
+    },
 ];
 
 var seedGames = () => {
