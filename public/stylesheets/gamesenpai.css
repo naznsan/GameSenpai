@@ -141,10 +141,12 @@ div.coach {
     margin: 20px;
     padding: 20px;
     border-radius: 15px;
+    height: 320px;
+    width: 240px;
     float: left;
 }
 
-.coachContainer {
+.coachContainer{
     margin-left: 160px;
     padding: 0px 10px;
 }
