@@ -29,10 +29,7 @@ function filter(item) {
             coachDiv[i].classList.remove("hide");
         } else {
             coachDiv[i].classList.add("fadeOut");
-            var index = i;
-            setTimeout(function() {
-                coachDiv[index].classList.add("hide");
-            }, 300);
+            coachDiv[i].classList.add("hide");
         }
     }
 }
