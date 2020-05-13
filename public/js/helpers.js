@@ -34,6 +34,23 @@ function filter(item) {
     }
 }
 
+function openSide() {
+    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.height = "100%";
+    document.getElementById("mySidebar").style.position = "fixed";
+    document.getElementById("mySidebar").style.zIndex = "1";
+    document.getElementById("mySidebar").style.top = "0";
+    document.getElementById("mySidebar").style.left = "0";
+    document.getElementById("mySidebar").style.margin= "0";
+    document.getElementById("mySidebar").style.display = "inline";
+}
+
+function closeSide() {
+    if (screen.width <= 500) {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+}
+
 module.exports = { 
     functionInHelper,
     test,

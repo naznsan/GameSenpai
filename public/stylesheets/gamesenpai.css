@@ -8,10 +8,13 @@ body, html {
 
 @media screen and (max-width: 500px){
     .sidebar {display: none;}
+    .sideToggle {display: inline;}
     div.coachContainer {margin-left: 0;}
-    div.coach {margin: auto}
-    div.game {width: 250px; height: 250px;}
+    div.coach {margin: 10px auto; float: none;}
+    div.game {width: 250px; height: 250px; margin: 10px auto; float: none;}
     img.gameImg {height: 180px; margin-right: 100px;}
+    span.sideToggle {display: inline;}
+    div#closeBtn {display: inline;}
 }
 
 h1 {
@@ -55,11 +58,27 @@ li a:hover:not(.active) {
     font-size: larger;
 }
 
+#closeBtn {
+    position: fixed;
+    font-size: xx-large;
+    left: 90vw;
+    top: 1vh;
+    display: none;
+}
+
+.sideToggle {
+    display: none;
+    color: white;
+    font-size: x-large;
+    left: -3px;
+    top: 50vh;
+    position: fixed;
+}
+
 hr {
     border-width: 0;
     margin-top: 0;
     height: 3.63px;
-    /* background-image: linear-gradient(to right, white, white, white, white, white, rgba(255, 255, 255, 0)); */
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 3.63px;
 }
@@ -161,7 +180,7 @@ body#coaches {
     background-color: #282E34;
 }
 
-div.coach {
+.coach {
     font-size: 95%;
     color: #dddddd;
     background-color: #000427;
@@ -176,6 +195,7 @@ div.coach {
 .coachContainer{
     margin-left: 190px;
     padding: 0px 10px;
+    height: 100%;
 }
 
 .sidebar {
@@ -259,7 +279,7 @@ body#games {
     margin: 10px;
     padding: 20px;
     border-radius: 15px;
-    width: 40vw;
+    width: 38vw;
     float: left;
     height: 200px;
 }
