@@ -6,6 +6,14 @@ body, html {
 
 }
 
+@media screen and (max-width: 500px){
+    .sidebar {display: none;}
+    div.coachContainer {margin-left: 0;}
+    div.coach {margin: auto}
+    div.game {width: 250px; height: 250px;}
+    img.gameImg {height: 180px; margin-right: 100px;}
+}
+
 h1 {
     color: white;
     margin-left: 20px;
@@ -41,6 +49,19 @@ li a:hover:not(.active) {
 
 .active {
     color: #9f9f9f;
+}
+
+.title {
+    font-size: larger;
+}
+
+hr {
+    border-width: 0;
+    margin-top: 0;
+    height: 3.63px;
+    /* background-image: linear-gradient(to right, white, white, white, white, white, rgba(255, 255, 255, 0)); */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3.63px;
 }
 
 /*for landing.ejs*/
@@ -157,12 +178,6 @@ div.coach {
     padding: 0px 10px;
 }
 
-@media screen and (max-width: 500px){
-    .sidebar {display: none;}
-    .coachContainer {margin-left: 0;}
-    div.coach {margin: 10px 15%;}
-}
-
 .sidebar {
     border-radius: 8px;
     width: 160px;
@@ -231,13 +246,26 @@ body#games {
     background-color: #282E34;
 }
 
+.gameContainer {
+    height: 100%;
+    width: 88%;
+    margin: auto;
+}
+
 .game {
     font-size: 95%;
     color: #dddddd;
     background-color: #000427;
-    margin: 10px auto;
+    margin: 10px;
     padding: 20px;
     border-radius: 15px;
-    width: 90vw;
-    float: center;
+    width: 40vw;
+    float: left;
+    height: 200px;
+}
+
+.gameImg {
+    height: 200px;
+    float: left;
+    margin-right: 20px;
 }

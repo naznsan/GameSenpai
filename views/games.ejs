@@ -34,9 +34,11 @@
         <div class="gameContainer">
             <% games.forEach(game => { %>
             <div class="game <%= game.name.toLowerCase().replace(/\s+/g,''); %>">
-                <div class="gameName">
+                <img class="gameImg" src="<%= game.image %>.jpg" alt="game photo" />
+                <div class="gameName title">
                     <%= game.name %>
                 </div>
+                <hr>
                 <div class="gameDesc">
                     <%= game.description %>
                 </div>
