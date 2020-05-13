@@ -7,7 +7,7 @@ body, html {
 }
 
 @media screen and (max-width: 500px){
-    .sidebar {display: none;}
+    div.sidebar {display: none;}
     .sideToggle {display: inline;}
     div.coachContainer {margin-left: 0;}
     div.coach {margin: 10px auto; float: none;}
@@ -212,6 +212,7 @@ body#coaches {
     margin-left: 7px;
     color: #ddd;
     text-decoration: underline;
+    display: inline;
 }
 
 .show {
