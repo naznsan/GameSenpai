@@ -3,7 +3,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Fredoka One', cursive;
-
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 500px){
@@ -18,7 +18,7 @@ body, html {
 }
 
 h1 {
-    color: white;
+    color: #dddddd;
     margin-left: 20px;
 }
 
@@ -40,7 +40,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #dddddd;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -68,7 +68,7 @@ li a:hover:not(.active) {
 
 .sideToggle {
     display: none;
-    color: white;
+    color: #dddddd;
     font-size: x-large;
     left: -3px;
     top: 50vh;
@@ -78,7 +78,7 @@ li a:hover:not(.active) {
 hr {
     border-width: 0;
     margin-top: 0;
-    height: 3.63px;
+    height: 3.6px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 3.63px;
 }
@@ -126,7 +126,7 @@ div.exp {
 
 .caption span.border {
     background-color: #111;
-    color: white;
+    color: #dddddd;
     padding: 18px;
     font-size: 4.5vmin;
 }
@@ -134,10 +134,10 @@ div.exp {
 span.retro {
     font-family: 'Press Start 2P', cursive;
     font-size: 3.5vmin;
-    color: white;
+    color: #dddddd;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: #dddddd;
 }
 
 div.desc {
@@ -149,8 +149,8 @@ div.desc {
 }
 
 span.outline {
-    color: white;
-    -webkit-text-fill-color: white;
+    color: #dddddd;
+    -webkit-text-fill-color: #dddddd;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
@@ -175,6 +175,10 @@ span.rainbow {
     color: #f7f7f7;
 }
 
+div.footnote {
+    background-color: #1f2327;
+}
+
 /*for coaches.ejs*/
 body#coaches {
     background-color: #282E34;
@@ -183,8 +187,8 @@ body#coaches {
 .coach {
     font-size: 95%;
     color: #dddddd;
-    background-color: #000427;
-    margin: 20px;
+    background-color: #444444;
+    margin: 15px;
     padding: 20px;
     border-radius: 15px;
     height: 320px;
@@ -276,7 +280,7 @@ body#games {
 .game {
     font-size: 95%;
     color: #dddddd;
-    background-color: #000427;
+    background-color: #444444;
     margin: 10px;
     padding: 20px;
     border-radius: 15px;
