@@ -34,7 +34,11 @@ app.get("/", (req, res) => {
 
 // Games List
 app.get("/games", (req, res) => {
-    res.render("games", { helper: helper });
+    // Get all games
+    Game.find({}, (err, allGames) => {
+        if (err) console.log(err);
+        else res.render("games", { helper: helper, games: allGames });
+    });
 });
 
 // Game Show
@@ -44,7 +48,11 @@ app.get("/games/:title", (req, res) => {
 
 // Coaches List
 app.get("/coaches", (req, res) => {
-    res.render("coaches", { helper: helper });
+    // Get all coaches
+    Coach.find({}, (err, allCoaches) => {
+        if (err) console.log(err);
+        else res.render("coaches", { helper: helper, coaches: allCoaches });
+    });
 });
 
 // Coach show

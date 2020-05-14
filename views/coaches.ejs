@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="stylesheets/gamesenpai.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="stylesheets/gamesenpai.css" />
+        <!-- Google fornts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Google fornts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+        <title>Game Senpai</title>
+    </head>
 
-    <title>Game Senpai</title>
-</head>
+    <body id="coaches">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li>
+                <a class="active" href="/coaches">COACHES</a>
+            </li>
+            <li><a href="/games">GAMES</a></li>
+        </ul>
 
-<body id="coaches">
-    <ul>
-        <li><a href="/">HOME</a></li>
-        <li>
-            <a class="active" href="/coaches">COACHES</a>
-        </li>
-        <li><a href="/games">GAMES</a></li>
-    </ul>
+        <h1>Coach Page</h1>
 
-    <h1>Coach Page</h1>
-
-    <div class="sidebar" id="mySidebar">
-        <span>Games</span>
-        <div id="closeBtn" onclick="closeSide()">&times;</div>
-        <button class="btn none active" onclick="filter('none'); closeSide()">Show All</button>
-        <% games.forEach(game => { %>
-        <% let str = game.name; %> 
-        <button class="btn <%= str.replace(/\s+/g,'').toLowerCase() %>" onclick="filter('<%= str.replace(/\s+/g,'').toLowerCase() %>'); closeSide()">
-            <%= game.name %>
-        </button>
-        <% })%>
-    </div>
-
-    <span class="sideToggle" onclick="openSide()">&#62;</span>
-
-    <div class="coachContainer">
-        <% coaches.forEach(coach => { %>   
-        <div class="coach <% coach.games.forEach(game => { %>
-                    <%= game.toLowerCase().replace(/\s+/g,''); %>
-                        <% } ) %>">
-            <div class="coachImg">
-                <img src="<%= coach.image %>.jpg" alt="profile photo" />
-            </div>
-            <div class="coachDesc">
-                <div class="coachName title">
-                    <%= coach.name %>
-                </div>
-                <hr>
-                <div class="gameList">
-                    <% coach.games.forEach(game => { %>
-                    <div class="gameName"><%= game %></div>
-                    <% })%>
-                </div>
-                <div class="rating">
-                    <% let total = coach.ratings.reduce((sum, num) => sum + num) %>
-                    <%= Math.round(total / coach.ratings.length * 10) / 10 %>
-                    <!-- Change both 100's in line above to control rounding place -->
-                </div>
-            </div>
+        <div class="sidebar" id="mySidebar">
+            <span>Games</span>
+            <div id="closeBtn" onclick="closeSide()">&times;</div>
+            <button
+                class="btn none active"
+                onclick="filter('none'); closeSide()"
+            >
+                Show All
+            </button>
+            <% let games = new Set();%>
+            <% coaches.forEach(coach => {
+                coach.games.forEach(game => games.add(game));
+            });%>
+            <% games.forEach(game => { %> 
+            <button
+                class="btn <%= game.replace(/\s+/g,'').toLowerCase() %>"
+                onclick="filter('<%= game.replace(/\s+/g,'').toLowerCase() %>'); closeSide()"
+            >
+                <%= game %>
+            </button>
+            <% })%>
         </div>
-        <% })%>
-    </div>
-    
-    <div class="desc footnote">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Praesent viverra magna quis venenatis posuere. Maecenas tempor
-            iaculis orci. Suspendisse potenti. Aenean vitae elementum felis.
-            Morbi quis cursus dui. Sed sapien turpis, facilisis eget
-            convallis eget, gravida et sem. Proin scelerisque mauris et odio
-            pharetra condimentum. Sed et sem et quam iaculis porta. Vivamus
-            quis aliquet felis. Pellentesque id pharetra tortor. Nulla in
-            fringilla neque. Aenean scelerisque enim sit amet turpis
-            consectetur finibus. Aenean ut nisi eleifend, aliquam velit vel,
-            malesuada ipsum. Sed in vulputate enim. Aenean tincidunt sit
-            amet neque sed pulvinar. Quisque arcu ante, tincidunt sed
-            convallis ac, egestas egestas eros. Suspendisse tempor ex id
-            risus scelerisque lacinia nec et sem. Suspendisse elit lorem,
-            auctor in mi vehicula, ultricies porttitor ex. Vivamus sodales
-            pellentesque justo, sit amet lobortis sem mattis ut. In aliquam
-            sagittis justo, sit amet commodo ipsum semper sit amet.
-        </p>
-    </div>
 
-    <script type="text/JavaScript" src="js/helpers.js"></script>
-</body>
+        <span class="sideToggle" onclick="openSide()">&#62;</span>
 
+        <div class="coachContainer">
+            <% coaches.forEach(coach => { %>
+            <div
+                class="coach <% coach.games.forEach(game => { %> <%= game.toLowerCase().replace(/\s+/g,''); %> <% } ) %>"
+            >
+                <div class="coachImg">
+                    <img src="<%= coach.image %>.jpg" alt="profile photo" />
+                </div>
+                <div class="coachDesc">
+                    <div class="coachName title">
+                        <%= coach.name %>
+                    </div>
+                    <hr />
+                    <div class="gameList">
+                        <% coach.games.forEach(game => { %>
+                        <div class="gameName"><%= game %></div>
+                        <% })%>
+                    </div>
+                    <div class="rating">
+                        <% let total = coach.ratings.reduce((sum, num) => sum +
+                        num) %> <%= Math.round(total / coach.ratings.length *
+                        10) / 10 %>
+                        <!-- Change both 100's in line above to control rounding place -->
+                    </div>
+                </div>
+            </div>
+            <% })%>
+        </div>
+
+        <div class="desc footnote">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent viverra magna quis venenatis posuere. Maecenas tempor
+                iaculis orci. Suspendisse potenti. Aenean vitae elementum felis.
+                Morbi quis cursus dui. Sed sapien turpis, facilisis eget
+                convallis eget, gravida et sem. Proin scelerisque mauris et odio
+                pharetra condimentum. Sed et sem et quam iaculis porta. Vivamus
+                quis aliquet felis. Pellentesque id pharetra tortor. Nulla in
+                fringilla neque. Aenean scelerisque enim sit amet turpis
+                consectetur finibus. Aenean ut nisi eleifend, aliquam velit vel,
+                malesuada ipsum. Sed in vulputate enim. Aenean tincidunt sit
+                amet neque sed pulvinar. Quisque arcu ante, tincidunt sed
+                convallis ac, egestas egestas eros. Suspendisse tempor ex id
+                risus scelerisque lacinia nec et sem. Suspendisse elit lorem,
+                auctor in mi vehicula, ultricies porttitor ex. Vivamus sodales
+                pellentesque justo, sit amet lobortis sem mattis ut. In aliquam
+                sagittis justo, sit amet commodo ipsum semper sit amet.
+            </p>
+        </div>
+
+        <script type="text/JavaScript" src="js/helpers.js"></script>
+    </body>
 </html>

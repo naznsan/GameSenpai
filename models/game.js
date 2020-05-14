@@ -8,7 +8,8 @@ var gameSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Coach"
         }
-    ]
+    ],
+    image: String,
 });
 
 module.exports = mongoose.model("Game", gameSchema);
