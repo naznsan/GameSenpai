@@ -8,7 +8,7 @@ body, html {
 
 @media screen and (max-width: 500px){
     div.sidebar {display: none;}
-    .sideToggle {display: inline;}
+    div.sideToggle {display: inline;}
     div.coachContainer {margin-left: 0;}
     div.coach {margin: 10px auto; float: none;}
     div.game {width: 250px; height: 250px; margin: 10px auto; float: none;}
@@ -182,6 +182,20 @@ div.footnote {
 /*for coaches.ejs*/
 body#coaches {
     background-color: #282E34;
+}
+
+.backGnd {
+    background-image: url("https://c0.wallpaperflare.com/preview/676/707/633/sweden-lan-lan-party-pc.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .coach {
