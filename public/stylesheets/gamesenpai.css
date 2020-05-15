@@ -184,7 +184,7 @@ body#coaches {
     background-color: #282E34;
 }
 
-.backGnd {
+.coachBackGnd {
     background-image: url("https://c0.wallpaperflare.com/preview/676/707/633/sweden-lan-lan-party-pc.jpg");
     min-height: 100%;
     background-attachment: fixed;
@@ -283,6 +283,20 @@ img {
 /* for games.ejs */
 body#games {
     background-color: #282E34;
+}
+
+.gameBackGnd {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/424/569/251/artwork-pattern-texture-dark-wallpaper-preview.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .3;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .gameContainer {
