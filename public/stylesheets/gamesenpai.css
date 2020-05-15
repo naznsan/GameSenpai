@@ -129,6 +129,7 @@ div.exp {
     color: #dddddd;
     padding: 18px;
     font-size: 4.5vmin;
+    border-radius: 10px
 }
 
 span.retro {
@@ -198,6 +199,12 @@ body#coaches {
     z-index: -1;
 }
 
+.coachContainer{
+    margin-left: 190px;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
 .coach {
     font-size: 95%;
     color: #dddddd;
@@ -208,12 +215,6 @@ body#coaches {
     height: 320px;
     width: 200px;
     float: left;
-}
-
-.coachContainer{
-    margin-left: 190px;
-    padding: 0px 10px;
-    height: 100%;
 }
 
 .sidebar {
@@ -300,9 +301,9 @@ body#games {
 }
 
 .gameContainer {
-    height: 100%;
     width: 88vw;
     margin: auto;
+    overflow: hidden;
 }
 
 .game {
@@ -327,4 +328,8 @@ body#games {
 .single {
     width: 90vw;
     margin: 3vw;
+}
+
+.wrap {
+    height: 100vh;
 }
