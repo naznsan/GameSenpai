@@ -35,7 +35,7 @@
 
         <div class="gameContainer">
             <% games.forEach(game => { %>
-            <a href="/games/<%= game.name.toLowerCase().replace(/\s+/g,''); %>">
+            <a href="/games/<%= game.name.toLowerCase().replace(/\s+/g,'-'); %>">
                 <div class="game <%= game.name.toLowerCase().replace(/\s+/g,''); %>">
                     <img class="gameImg" src="<%= game.image %>.jpg" alt="game photo" />
                     <div class="gameName title">
