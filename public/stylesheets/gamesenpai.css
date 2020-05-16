@@ -83,6 +83,10 @@ hr {
     border-radius: 3.63px;
 }
 
+div.footnote {
+    background-color: #1f2327;
+}
+
 /*for landing.ejs*/
 .parallax {
     position: relative;
@@ -176,10 +180,6 @@ span.rainbow {
     color: #f7f7f7;
 }
 
-div.footnote {
-    background-color: #1f2327;
-}
-
 /*for coaches.ejs*/
 body#coaches {
     background-color: #282E34;
@@ -202,6 +202,7 @@ body#coaches {
 .coachContainer{
     margin-left: 190px;
     padding: 0px 10px;
+    padding-bottom: 300px;
     overflow: hidden;
 }
 
@@ -303,6 +304,7 @@ body#games {
 .gameContainer {
     width: 88vw;
     margin: auto;
+    padding-bottom: 300px;
     overflow: hidden;
 }
 
