@@ -73,7 +73,7 @@
                     <hr />
                     <div class="gameList">
                         <% coach.games.forEach(game => { %>
-                        <div class="gameName"><%= game %></div>
+                        <div class="gameName"><a href="/games/<%= game.toLowerCase().replace(/\s+/g,'-'); %>"><%= game %></a></div>
                         <% })%>
                     </div>
                     <div class="rating">
