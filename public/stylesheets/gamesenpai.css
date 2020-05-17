@@ -11,7 +11,7 @@ body, html {
     div.sideToggle {display: inline;}
     div.coachContainer {margin-left: 0;}
     div.coach {margin: 10px auto; float: none;}
-    div.game {width: 250px; height: 250px; margin: 10px auto; float: none;}
+    div.game {width: 250px; height: auto; margin: 10px auto; float: none;}
     img.gameImg {height: 180px; margin-right: 100px;}
     span.sideToggle {display: inline;}
     div#closeBtn {display: inline;}
@@ -331,8 +331,13 @@ body#games {
 .single {
     width: 90vw;
     margin: 3vw;
+    margin-top: 1vw;
 }
 
 .wrap {
     height: 100vh;
+}
+
+.gameCoach {
+    margin-bottom: 2px;
 }
