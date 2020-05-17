@@ -43,7 +43,15 @@ app.get("/games", (req, res) => {
 
 // Game Show
 app.get("/games/:title", (req, res) => {
-    res.render("showGame", { helper: helper });
+    //to edit req.params.title to correct format
+    const title = req.params.title.replace(/-/g, ' ').replace(/\b\w/g, function(c) {
+        return c.toUpperCase();
+    });
+    //find game that matches title
+    Game.find({name: title}, (err, game) => {
+        if (err) console.log(err);
+        else res.render("showGame", { helper: helper, game: game });
+    });
 });
 
 // Coaches List
