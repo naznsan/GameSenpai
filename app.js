@@ -69,7 +69,11 @@ app.get("/coaches", (req, res) => {
 
 // Coach show
 app.get("/coach/:id", (req, res) => {
-    res.render("showCoach", { helper: helper });
+    //find coach that matches id
+    Coach.find({_id: req.params.id}, (err, coach) => {
+        if (err) console.log(err);
+        else res.render("showCoach", { helper: helper, coach: coach });
+    });
 });
 
 const port = process.env.PORT || 3000;
