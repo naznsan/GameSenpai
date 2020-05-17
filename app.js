@@ -50,7 +50,11 @@ app.get("/games/:title", (req, res) => {
     //find game that matches title
     Game.find({name: title}, (err, game) => {
         if (err) console.log(err);
-        else res.render("showGame", { helper: helper, game: game });
+        //find coaches for the game
+        else Coach.find({_id: game[0].coaches}, (err, allCoaches) => {
+            if (err) console.log(err);
+            else res.render("showGame", { helper: helper, coaches: allCoaches, game: game });
+        });
     });
 });
 
@@ -65,7 +69,7 @@ app.get("/coaches", (req, res) => {
 
 // Coach show
 app.get("/coach/:id", (req, res) => {
-    res.render("specificCoach", { helper: helper });
+    res.render("showCoach", { helper: helper });
 });
 
 const port = process.env.PORT || 3000;
