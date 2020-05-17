@@ -60,9 +60,9 @@
 
         <div class="coachContainer">
             <% coaches.forEach(coach => { %>
-            <div
-                class="coach <% coach.games.forEach(game => { %> <%= game.toLowerCase().replace(/\s+/g,''); %> <% } ) %>"
-            >
+            <a href="/coach/<%= coach._id %>">
+            <div class="coach <% coach.games.forEach(game => { %> <%= game.toLowerCase().replace(/\s+/g,''); %>
+                 <% } ) %>">
                 <div class="coachImg">
                     <img src="<%= coach.image %>.jpg" alt="profile photo" />
                 </div>
@@ -73,7 +73,11 @@
                     <hr />
                     <div class="gameList">
                         <% coach.games.forEach(game => { %>
-                        <div class="gameName"><a href="/games/<%= game.toLowerCase().replace(/\s+/g,'-'); %>"><%= game %></a></div>
+                        <div class="gameName">
+                            <a href="/games/<%= game.toLowerCase().replace(/\s+/g,'-'); %>">
+                                <%= game %>
+                            </a>
+                        </div>
                         <% })%>
                     </div>
                     <div class="rating">
@@ -84,6 +88,7 @@
                     </div>
                 </div>
             </div>
+            </a>
             <% })%>
         </div>
 
