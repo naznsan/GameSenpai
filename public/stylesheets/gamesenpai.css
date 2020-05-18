@@ -287,7 +287,7 @@ img {
 
 /* for games.ejs */
 body#games {
-    background-color: #282E34;
+    background-color: rgb(65, 70, 75);
 }
 
 .gameBackGnd {
