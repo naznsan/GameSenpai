@@ -10,9 +10,11 @@ body, html {
     div.sidebar {display: none;}
     div.sideToggle {display: inline;}
     div.coachContainer {margin-left: 0;}
-    div.coach {margin: 10px auto; float: none;}
+    div.coach {margin: 10px auto; float: none; height: auto;}
     div.game {width: 250px; height: auto; margin: 10px auto; float: none;}
+    div.coach.single {width: 250px; height: auto; margin: 10px auto; float: none;}
     img.gameImg {height: 180px; margin-right: 100px;}
+    img.singleCoachImg {height: 180px; margin-right: 100px; float: none;}
     span.sideToggle {display: inline;}
     div#closeBtn {display: inline;}
 }
@@ -343,7 +345,7 @@ body#games {
 }
 
 /* for showCoach.ejs */
-img.coachImg {
+.singleCoachImg {
     float: left;
     height: 100%;
     margin-right: 20px;
@@ -351,6 +353,8 @@ img.coachImg {
 
 .coach.single {
     height: 240px;
+    margin: 3vw;
+    margin-top: 1vw;
 }
 
 .gameName {
