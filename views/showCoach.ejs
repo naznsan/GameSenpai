@@ -1,1 +1,63 @@
-<h1>This is where info about a specific coach will go</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/stylesheets/gamesenpai.css" />
+
+        <!-- Google fornts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+            rel="stylesheet"
+        />
+        
+        <title>Game Senpai - <%= coach[0].name %></title>
+    </head>
+
+    <body id="coaches">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li>
+                <a class="active" href="/coaches">COACHES</a>
+            </li>
+            <li><a href="/games">GAMES</a></li>
+        </ul>
+
+        <div class="coachBackGnd"></div>
+
+        <h1><%= coach[0].name %></h1>
+        
+        <div class="wrap">
+            <div class="coach single">
+                <img src="<%= coach[0].image %>.jpg" alt="coach img" class="coachImg">
+                <div class="coachName title">
+                    <%= coach[0].name %>
+                </div>
+                <hr>
+                <div class="coachRate">
+                    Rating: <% let total = coach[0].ratings.reduce((sum, num) => sum +
+                            num) %> <%= Math.round(total / coach[0].ratings.length *
+                            10) / 10 %>/5
+                </div>
+                <div class="title" style="margin-top: 2%;">
+                    Game
+                </div>
+                <hr>
+                <% coach[0].games.forEach(game => { %>
+                <div class="gameName">
+                    <a href="/games/<%= game.toLowerCase().replace(/\s+/g,'-'); %>">
+                    <%= game %>
+                    </a>
+                </div>
+                <% })%>
+            </div>
+        </div>
+        
+    </body>
+</html>

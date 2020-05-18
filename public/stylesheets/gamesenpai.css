@@ -341,3 +341,18 @@ body#games {
 .gameCoach {
     margin-bottom: 2px;
 }
+
+/* for showCoach.ejs */
+img.coachImg {
+    float: left;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.coach.single {
+    height: 240px;
+}
+
+.gameName {
+    margin-bottom: 2px;
+}
