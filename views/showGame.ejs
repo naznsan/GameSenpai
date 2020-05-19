@@ -21,8 +21,10 @@
     </head>
 
     <body id="games">
+        <!-- background image -->
         <div class="gameBackGnd"></div>
-        
+
+        <!-- horizontal navbar -->
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/coaches">COACHES</a></li>
@@ -33,6 +35,7 @@
 
         <h1><%= game[0].name %></h1>
 
+        <!-- game tile -->
         <div class="wrap">
             <div class="game single">
                 <img src="<%= game[0].image %>.jpg" alt="game_img" class="gameImg">
@@ -57,6 +60,7 @@
             </div>
         </div>
 
+        <!-- footnote -->
         <div class="desc footnote">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

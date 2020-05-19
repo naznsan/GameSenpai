@@ -24,8 +24,10 @@
     </head>
 
     <body id="coaches">
+        <!-- background image -->
         <div class="coachBackGnd"></div>
-        
+
+        <!-- horizontal navbar -->
         <ul>
             <li><a href="/">HOME</a></li>
             <li>
@@ -36,6 +38,7 @@
 
         <h1>Coach Page</h1>
 
+        <!-- vertical navbar for filtering -->
         <div class="sidebar" id="mySidebar">
             <span>Games</span>
             <div id="closeBtn" onclick="closeSide()">&times;</div>
@@ -59,8 +62,10 @@
             <% })%>
         </div>
 
+        <!-- button to open sidebar when on mobile -->
         <span class="sideToggle" onclick="openSide()">&#62;</span>
 
+        <!-- for coach tiles -->
         <div class="coachContainer">
             <% coaches.forEach(coach => { %>
             <a href="/coach/<%= coach._id %>">
@@ -97,6 +102,7 @@
             <% })%>
         </div>
 
+        <!-- footnote -->
         <div class="desc footnote">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -118,6 +124,7 @@
             </p>
         </div>
 
+        <!-- Custom js file -->
         <script type="text/JavaScript" src="js/helpers.js"></script>
     </body>
 </html>
