@@ -52,6 +52,9 @@
                             num) %>
                         <div class="innerStars" style="width: <%= Math.round(total / coach[0].ratings.length *
                         20) %>%;"></div>
+                        <!-- displays numeric rating when hovered -->
+                        <span class="numRate"><%= Math.round(total / coach[0].ratings.length *
+                            10) / 10 %>/5</span>
                     </div>
                 </div>
                 <div class="title" style="margin-top: 2%;">

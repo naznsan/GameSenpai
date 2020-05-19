@@ -95,10 +95,11 @@ div.footnote {
     display: inline-block;
     position: relative;
     font-family: FontAwesome;
+    color: #7a8188;
 }
 
 .outerStars::before {
-    content: "\f006 \f006 \f006 \f006 \f006";
+    content: "\f005 \f005 \f005 \f005 \f005";
 }
 
 .innerStars {
@@ -113,6 +114,37 @@ div.footnote {
 .innerStars::before {
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
+}
+
+.numRate {
+    display: none;
+    font-family: 'Fredoka One', cursive;
+    font-size: medium;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 16%;
+    background-color: #696f75;
+    color: #dddddd;
+    margin: 6px;
+    margin-top: 9px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.numRate::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #696f75 transparent;
+}
+
+.outerStars:hover .numRate {
+    display: inline-block;
 }
 
 /*for landing.ejs*/
