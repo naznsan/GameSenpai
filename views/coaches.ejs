@@ -7,6 +7,9 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="stylesheets/gamesenpai.css" />
 
+        <!-- FontAwesome CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- Google fornts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -81,10 +84,12 @@
                         <% })%>
                     </div>
                     <div class="rating">
-                        <% let total = coach.ratings.reduce((sum, num) => sum +
-                        num) %> <%= Math.round(total / coach.ratings.length *
-                        10) / 10 %>
-                        <!-- Change both 100's in line above to control rounding place -->
+                        <div class="outerStars">
+                            <% let total = coach.ratings.reduce((sum, num) => sum +
+                                num) %>
+                            <div class="innerStars" style="width: <%= Math.round(total / coach.ratings.length *
+                            20) %>%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>

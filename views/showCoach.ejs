@@ -7,6 +7,9 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/stylesheets/gamesenpai.css" />
 
+        <!-- FontAwesome CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- Google fornts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -22,7 +25,7 @@
 
     <body id="coaches">
         <div class="coachBackGnd"></div>
-        
+
         <ul>
             <li><a href="/">HOME</a></li>
             <li>
@@ -41,9 +44,12 @@
                 </div>
                 <hr>
                 <div class="coachRate">
-                    Rating: <% let total = coach[0].ratings.reduce((sum, num) => sum +
-                            num) %> <%= Math.round(total / coach[0].ratings.length *
-                            10) / 10 %>/5
+                    <div class="outerStars">
+                        <% let total = coach[0].ratings.reduce((sum, num) => sum +
+                            num) %>
+                        <div class="innerStars" style="width: <%= Math.round(total / coach[0].ratings.length *
+                        20) %>%;"></div>
+                    </div>
                 </div>
                 <div class="title" style="margin-top: 2%;">
                     Game
